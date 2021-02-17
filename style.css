@@ -1,0 +1,123 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 18px;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+}
+.title {
+    width: 50%;
+    height: 100vh;
+    background: #ebd6cb;
+    position: relative;
+    border-right: 3px solid #926645;
+}
+.presentation {
+    position: absolute;
+    color: #926645;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-right: 3px solid #926645;
+}
+.presentation p {
+    margin-top: 20px;
+    color:grey;
+}
+h1 {
+    font-size: 60px;
+    display: block;
+    width: 100%;
+}
+.bouton {
+    background-color: #926645;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.bouton:hover {
+    background-color: grey;
+    color: snow;
+}
+/*----- Partie Carte -----*/
+.boxCartes{
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 100vh;
+}
+.cards, .cards .stack {
+    transform-style: preserve-3d;
+}
+.cards {
+    display: grid;
+    grid-template: repeat(1, 324px) / repeat(1, 540px);
+    grid-gap: 27px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform:rotateX(-45deg) rotateZ(-45deg);
+    transition: 1s ease;
+}
+.cards:hover {
+    transform:rotateX(0deg) rotateZ(0deg);
+    
+}
+.cards .stack {
+    display: block;
+    position: relative;
+}
+.contents {
+    font-size: 13.5px;
+    line-height: 1.25;
+    color: black;
+}
+.contents h2 {
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.contents h2 strong{
+    color: #926645;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.contents span {
+    margin-right: 13.5px;
+}
+.contents h3 {
+    color: black;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.contents h4 {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.stack .card {
+    background-image: url("https://cdn.pixabay.com/photo/2018/11/17/07/10/desktop-3820634_960_720.jpg");
+    background-size: 100% 100%;
+    padding: 13.5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.9);
+}
